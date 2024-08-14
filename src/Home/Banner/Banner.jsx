@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import PhoneIcon from '@mui/icons-material/Phone';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import DomainIcon from '@mui/icons-material/Domain';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -42,12 +45,12 @@ export default function BasicTabs() {
     };
 
     return (
-        <Box sx={{ width: '100%', marginX: 'auto', marginTop:'50px',marginBottom:'50px'}}>
-            <Box sx={{ width: '50%', margin: 'auto', background: 'pink', borderRadius: '50px', paddingY:'4px',  }}>
+        <Box sx={{ width: '100%', marginX: 'auto', marginTop: '50px', marginBottom: '50px' }}>
+            <Box sx={{ width: '50%', margin: 'auto', background: 'pink', borderRadius: '50px', paddingY: '4px', }}>
                 <Tabs
                     value={value}
                     onChange={handleChange}
-                    aria-label="basic tabs example"
+                    aria-label="icon position tabs example"
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -58,14 +61,16 @@ export default function BasicTabs() {
                     }}
                 >
                     <Tab
+                        icon={<FlightTakeoffIcon sx={{ color: value === 0 ? '#fff' : 'black' }} />} // Apply color directly to the icon
+                        iconPosition="start"
                         label="FLIGHT"
                         {...a11yProps(0)}
                         sx={{
                             backgroundColor: value === 0 ? '#32D095' : 'transparent',
                             color: value === 0 ? '#fff' : 'inherit',
                             paddingX: '30px', // Add padding X
-                            paddingY: '0px', // Add padding Y
-                            borderRadius:'50px',
+                            paddingY: '4px', // Add padding Y
+                            borderRadius: '50px',
                             '&.Mui-selected': {
                                 backgroundColor: '#32D095', // Set background color for selected tab
                                 color: '#fff', // Set text color for selected tab
@@ -73,18 +78,25 @@ export default function BasicTabs() {
                             },
                             '&:not(.Mui-selected)': {
                                 borderBottom: 'none', // Ensure bottom border is removed for non-selected tabs
-                            }
+                                color:'#32D095'
+                            },
+                            // Ensure icons are always visible
+                            '& .MuiTab-icon': {
+                                color: '#fff', // Ensure the icon color is consistent
+                            },
                         }}
                     />
                     <Tab
                         label="HOTEL"
+                        icon={<DomainIcon sx={{ color: value === 0 ? '#fff' : 'black' }} />} // Apply color directly to the icon
+                        iconPosition="start"
                         {...a11yProps(1)}
                         sx={{
                             backgroundColor: value === 1 ? '#32D095' : 'transparent',
                             color: value === 1 ? '#fff' : 'inherit',
                             paddingX: '30px', // Add padding X
                             paddingY: '1px', // Add padding Y
-                            borderRadius:'50px',
+                            borderRadius: '50px',
                             '&.Mui-selected': {
                                 backgroundColor: '#32D095', // Set background color for selected tab
                                 color: '#fff', // Set text color for selected tab
@@ -92,18 +104,21 @@ export default function BasicTabs() {
                             },
                             '&:not(.Mui-selected)': {
                                 borderBottom: 'none', // Ensure bottom border is removed for non-selected tabs
+                                 color:'#32D095'
                             }
                         }}
                     />
                     <Tab
                         label="TOUR"
+                        icon={<TravelExploreIcon sx={{ color: value === 0 ? '#fff' : 'black' }}/>} // Apply color directly to the icon
+                        iconPosition="start"
                         {...a11yProps(2)}
                         sx={{
                             backgroundColor: value === 2 ? '#32D095' : 'transparent',
                             color: value === 2 ? '#fff' : 'inherit',
                             paddingX: '30px', // Add padding X
                             paddingY: '1px', // Add padding Y
-                            borderRadius:'50px',
+                            borderRadius: '50px',
                             '&.Mui-selected': {
                                 backgroundColor: '#32D095', // Set background color for selected tab
                                 color: '#fff', // Set text color for selected tab
@@ -111,19 +126,22 @@ export default function BasicTabs() {
                             },
                             '&:not(.Mui-selected)': {
                                 borderBottom: 'none', // Ensure bottom border is removed for non-selected tabs
+                                 color:'#32D095'
                             }
                         }}
                     />
                     <Tab
-                        icon={<PhoneMissedIcon />} iconPosition="start"
+
                         label="VISA"
+                        icon={<AirplaneTicketIcon sx={{ color: value === 0 ? '#fff' : 'black' }} />} // Apply color directly to the icon
+                        iconPosition="start"
                         {...a11yProps(3)}
                         sx={{
                             backgroundColor: value === 3 ? '#32D095' : 'transparent',
                             color: value === 2 ? '#fff' : 'inherit',
                             paddingX: '30px', // Add padding X
                             paddingY: '1px', // Add padding Y
-                            borderRadius:'50px',
+                            borderRadius: '50px',
                             '&.Mui-selected': {
                                 backgroundColor: '#32D095', // Set background color for selected tab
                                 color: '#fff', // Set text color for selected tab
@@ -131,6 +149,7 @@ export default function BasicTabs() {
                             },
                             '&:not(.Mui-selected)': {
                                 borderBottom: 'none', // Ensure bottom border is removed for non-selected tabs
+                                 color:'#32D095'
                             }
                         }}
                     />
