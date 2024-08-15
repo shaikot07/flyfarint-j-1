@@ -9,6 +9,10 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 import HotelInfo from '../../Component/ParentTab/Hotel/HotelInfo';
 import SearchSection from '../../Component/SearchSection';
+import TourInfo from '../../Component/ParentTab/Tour/TourInfo';
+import Flight from '../../Component/ParentTab/Flight/Flight';
+import Visa from '../../Component/ParentTab/Visa/Visa';
+
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -47,7 +51,7 @@ export default function BasicTabs() {
     };
 
     return (
-        <Box sx={{ width: '100%', marginX: 'auto', marginTop: '50px', marginBottom: '50px' }}>
+        <Box sx={{ width: '100%', marginX: 'auto', marginTop: '100px', marginBottom: '50px', position:'fixed' }}>
             <Box sx={{ width: '50%', margin: 'auto', background: 'white', borderRadius: '50px', height: '51px' }}>
                 <Tabs
                     value={value}
@@ -190,17 +194,18 @@ export default function BasicTabs() {
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-               <h1>lorem500</h1>
+               <Flight></Flight>
+               {/* <FlightSearchTabs></FlightSearchTabs> */}
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                {/* <HotelInfo></HotelInfo> */}
                <SearchSection></SearchSection>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
-                tour
+               <TourInfo></TourInfo>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
-                visa
+                <Visa></Visa>
             </CustomTabPanel>
         </Box>
     );

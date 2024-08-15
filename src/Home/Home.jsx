@@ -10,7 +10,7 @@ const Home = () => {
             {/* <div className="bg-[url('https://i.ibb.co/4KfXjMK/mainbannerimg.jpg')] bg-cover bg-center max-w-6xl mx-auto min-h-7">
           <Banner></Banner>
           </div> */}
-            <Box sx={{ position: 'relative', maxWidth: '1300px', margin: 'auto', height: '400px' }}>
+            <Box sx={{ position: 'relative', maxWidth: '1300px', margin: 'auto', height: '500px' }}>
                 {/* Background Image */}
                 <Box
                     sx={{

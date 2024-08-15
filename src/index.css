@@ -32,6 +32,7 @@
   margin-bottom: 5px;
   height: 35px;
   border: none !important;
+  width:243px;
   
 }
 .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
@@ -61,3 +62,13 @@
 .css-i4bv87-MuiSvgIcon-root{
   color: white;
 } 
+
+.css-1j0qv3c-MuiButtonBase-root-MuiTab-root{
+  color: #32D095;
+}
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+  width: 200px;
+}
+.my-width{
+  width: 200px !important;
+}
