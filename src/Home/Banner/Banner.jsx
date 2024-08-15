@@ -7,6 +7,8 @@ import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import DomainIcon from '@mui/icons-material/Domain';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
+import HotelInfo from '../../Component/ParentTab/Hotel/HotelInfo';
+import SearchSection from '../../Component/SearchSection';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -191,7 +193,8 @@ export default function BasicTabs() {
                <h1>lorem500</h1>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-                Hotel
+               {/* <HotelInfo></HotelInfo> */}
+               <SearchSection></SearchSection>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
                 tour

@@ -18,7 +18,9 @@
 @tailwind utilities;
 
 
-
+.primary{
+  color: #32D095;
+}
 /* --primary-color: #525371;
     --secondary-color: #32d095;
     --text-color: #525371;
