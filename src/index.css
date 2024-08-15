@@ -21,9 +21,43 @@
 .primary{
   color: #32D095;
 }
-/* --primary-color: #525371;
-    --secondary-color: #32d095;
-    --text-color: #525371;
-    --body-color: #EDF2F6;
-    --card-color: #FFFFFF;
-    --input-bgcolor: #d7e7f4; */
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd {
+  background-color: #D7E7F4; /* Custom background color */
+  /* border-radius: 8px;  */
+  border: 20px solid purple !important;
+  color: black; /* Custom text color */
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 35px;
+  border: none !important;
+  
+}
+.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
+  background-color: #32D095 !important;
+  border-radius: 0px !important;
+  /* width: fit-content !important; */
+  /* margin-right: 1px !important; */
+  height: 35px;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  
+}
+.MuiOutlinedInput-notchedOutline{
+  border: 'none', 
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd {
+  background-color: #D7E7F4; 
+  border: none; 
+  border-radius: 8px; 
+  padding-right: 0px;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd .MuiOutlinedInput-notchedOutline {
+  border: none; /* Ensure no border for the outline */
+}
+
+.css-i4bv87-MuiSvgIcon-root{
+  color: white;
+} 
